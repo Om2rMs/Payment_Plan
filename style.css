@@ -1,0 +1,575 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://www.xmple.com/wallpaper/linear-highlight-gradient-violet-2560x1440-c2-40296d-281e3b-l-33-a-195-f-21.svg);
+
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.first-window {
+    width: 400px;
+    height: 500px;
+    padding: 50px;
+    background-color: #1D1C23;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-radius: 35px;
+    position: relative;
+
+}
+
+.first-window::before {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 20px solid #1d1c235d;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.first-window h2 {
+    color: white;
+    margin: 0;
+}
+
+.first-window .under-title {
+    color: gray;
+}
+
+.window-inside-first-window .first-part span {
+    color: gray;
+}
+
+.window-inside-first-window {
+    width: 100%;
+    height: 80%;
+    background-color: #222028;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px;
+
+}
+
+.window-inside-first-window .first-part {
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    color: white;
+    margin-left: 80px;
+    position: relative;
+}
+
+.window-inside-first-window .first-part::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
+
+.first-part h4 {
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.second-part {
+    color: gray;
+    margin-left: 40px;
+    position: relative;
+}
+
+.window-inside-first-window .second-part p::before {
+    content: "★";
+    position: absolute;
+    color: dodgerblue;
+    transform: translate(0, -10px);
+    left: -40px;
+    font-size: 24px;
+}
+
+.choose-input {
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+    background-image: linear-gradient(to top,
+    #A350FF,
+    #723EFF);
+    cursor: pointer;
+}
+
+.three-points {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    align-content: center;
+}
+
+.three-points span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(24, 81, 138)
+}
+
+.three-points .selected {
+    background-color: dodgerblue;
+}
+
+/* Second window */
+
+.second-window {
+    width: 400px;
+    height: 500px;
+    padding: 50px;
+    background-color: #1D1C23;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    border-radius: 35px;
+    position: relative;
+}
+
+.second-window::before {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 20px solid #1d1c235d;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.second-window .first-part {
+    width: 100%;
+    height: 70px;
+    background-color: #222028;
+    border-radius: 20px;
+    position: relative;
+    transform: translate(0, -30%);
+    margin-top: 20px;
+}
+
+.second-window .first-part::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    left: 20px;
+    top: 15px;
+    background-color: plum;
+    border-radius: 5px;
+}
+
+.second-window .first-part::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 20px;
+    top: 15px;
+    background-color: plum;
+    border-radius: 50%;
+}
+
+.second-window .first-part h4 {
+    margin: 0;
+    font-size: 13px;
+    transform: translate(25%, 100%);
+}
+
+/* .container{
+    display: block;
+    position: relative;
+    height: auto;
+    width: 500px;
+}
+
+h2 {
+    color: #AAAAAA;
+}
+
+.container ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+ul li{
+    color: #AAAAAA;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+}
+
+ul li input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+}
+
+ul li label{
+    display: flex;
+    background-color: #222028;
+    width: 100%;
+    height: 80px;
+    border-radius: 15px;
+    padding: 30px 0 0 70px;
+    flex-wrap: wrap;
+    border: 2px solid #AAAAAA;
+    position: relative;
+    overflow: hidden;
+}
+
+ul li:hover label{
+    color: #FFFFFF;
+    border: 2px solid dodgerblue;
+
+}
+
+ul li .check{
+    display: block;
+    position: absolute;
+    border: 5px solid #AAAAAA;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    top: 30px;
+    left: 20px;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
+
+
+
+ul li .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+}
+
+
+
+input[type=radio]:checked ~ .check::before{
+    background: #ffffff;
+}
+
+input[type=radio]:checked ~ label{
+    color: #ffffff;
+    border: 2px solid dodgerblue;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+
+/* .yearly {
+    display: flex;
+    background-color: #222028;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    border-radius: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+    border: 2px solid dodgerblue;
+    position: relative;
+    overflow: hidden;
+}
+
+.yearly::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 25px solid;
+    border-color: transparent dodgerblue dodgerblue transparent;
+    transform: rotate(-90deg);
+}
+
+.yearly::after {
+    content: "★";
+    position: absolute;
+    right: 5px;
+    top: -3px;
+    font-size: 24px;
+}
+
+
+
+.up h3 {
+    margin: 0;
+}
+
+.up {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 30px;
+    position: relative;
+}
+
+.up::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border: 5px solid gray;
+    position: absolute;
+    left: -28px;
+    top: 2px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.yearly h6 {
+    margin: 0;
+    color: gray;
+    transform: translate(-65%, -50%);
+}
+
+.price {
+    position: relative;
+}
+
+.price::before {
+    content: "$";
+    font-weight: 100;
+    font-size: 12px;
+    position: absolute;
+    left: -8px;
+    color: gray;
+}
+
+.price::after {
+    content: "/ m";
+    font-weight: 100;
+    font-size: 12px;
+    position: absolute;
+    right: -18px;
+    top: 6px;
+    color: gray;
+}
+
+.monthly {
+    display: flex;
+    background-color: #222028;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    border-radius: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    border: 2px solid white;
+}
+
+.monthly h6 {
+    margin: 0;
+    color: gray;
+    transform: translate(-20%, -50%);
+}
+*/
+.make-input {
+    width: 100%;
+    margin: 0 auto;
+    height: 65px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+    background-image: linear-gradient(to top,
+    #A350FF,
+    #723EFF);
+    cursor: pointer;
+} 
+
+.wrapper{
+    display: block;
+    position: relative;
+    height: auto;
+    width: 500px;
+}
+  
+  .wrapper .box label{
+    display: flex;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    margin: 20px 0;
+    padding-left: 20px;
+    cursor: default;
+    transition: all 0.3s ease;
+    
+  }
+  #option-1:checked ~ .option-1,
+  #option-2:checked ~ .option-2,
+  #option-3:checked ~ .option-3,
+  #option-4:checked ~ .option-4{
+    background: #333;
+    border-color: dodgerblue;
+  }
+  .wrapper .box label .dot{
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  #option-1:checked ~ .option-1 .dot,
+  #option-2:checked ~ .option-2 .dot,
+  #option-3:checked ~ .option-3 .dot,
+  #option-4:checked ~ .option-4 .dot{
+    background: #fff;
+  }
+  .box label .dot::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  #option-1:checked ~ .option-1 .dot::before,
+  #option-2:checked ~ .option-2 .dot::before,
+  #option-3:checked ~ .option-3 .dot::before,
+  #option-4:checked ~ .option-4 .dot::before{
+    background: #333;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .wrapper .box label .text{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 10px;
+    transition: color 0.3s ease;
+  }
+  .wrapper .box label .price{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 100px;
+    transition: color 0.3s ease;
+  }
+
+  .wrapper .box label .month{
+    color:dimgrey;
+    font-size: 10px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+  }
+
+  .wrapper .box label .dollar{
+    color:dimgrey;
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  .wrapper .box label .star p{
+    position: absolute;
+  right: 5px;
+  top: 20px;
+  color:white;
+  z-index:1;
+  margin:0;
+  padding:0;
+  font-size: 30px;
+  }
+
+  
+
+  .star:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 0; 
+    height: 0; 
+    display: block;
+    border-left: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-top: 35px solid dodgerblue;
+    z-index:0;
+    
+ }
+
+ 
+
+  #option-1:checked ~ .option-1 .text,
+  #option-2:checked ~ .option-2 .text,
+  #option-3:checked ~ .option-3 .text,
+  #option-4:checked ~ .option-4 .text{
+    color: #fff;
+  }
+  .wrapper .box input[type="radio"]{
+    display: none;
+  }
+
+
+
+  
