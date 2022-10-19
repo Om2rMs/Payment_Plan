@@ -1,4 +1,3 @@
 # Payment_Plan
 
-![Images](https://user-images.githubusercontent.com/67797112/196773978-01cbbd5a-a76f-4352-a714-82e559eca530.png")
-
+<img width="1440" alt="Screen Shot 1444-03-23 at 9 20 03 PM" src="https://user-images.githubusercontent.com/67797112/196774662-220276ea-faf7-4ba0-ab0e-280ca951797c.png">
